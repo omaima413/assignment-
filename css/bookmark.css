@@ -1,0 +1,43 @@
+body {
+  background-color: #fcefdc;
+  margin: 0;
+  height: 100vh;                  /* full height */
+  display: flex;                  /* flexbox layout */
+  justify-content: center;        /* center horizontally */
+  align-items: center;            /* center vertically */
+}
+
+h1 {
+  position: relative;
+  display: inline-block;
+  font-family: cursive;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 3rem;
+  
+}
+
+/* Underline highlight bar */
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  
+  height: 12px;
+  background: #f4a261;      /* orange highlight */
+  z-index: -1;
+  transition: background 0.3s ease;
+  border-radius: 3px;
+}
+
+/* Hover effect */
+h1:hover::after {
+  background: #e76f51; /* darker orange on hover */
+}
+
+/* Click effect */
+h1.active::after {
+  background: #90ee90; /* green when clicked */
+}
